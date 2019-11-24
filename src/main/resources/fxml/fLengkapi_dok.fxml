@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXListView?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="formpengindeksandokumen" prefHeight="692.0" prefWidth="1271.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.storageing.Form_pengindeksan_dokumenController">
+   <children>
+      <AnchorPane id="AnchorPane" fx:id="idlengkapidok" layoutY="1.0" prefHeight="691.0" prefWidth="1271.0" style="-fx-background-color: #99c5ff;">
+         <children>
+            <JFXButton fx:id="DATA_JUDUL" buttonType="RAISED" layoutX="1128.0" layoutY="209.0" onAction="#btn_data_judul" prefHeight="30.0" prefWidth="56.0" style="-fx-background-color: #0c1045;" text="cari" textFill="WHITE" />
+            <TextField fx:id="txt_caritahun" layoutX="982.0" layoutY="205.0" prefHeight="36.0" prefWidth="139.0" promptText="masukan tahun terbit !" />
+            <JFXListView fx:id="lv_judul" layoutX="741.0" layoutY="243.0" prefHeight="400.0" prefWidth="448.0" />
+            <Label layoutX="747.0" layoutY="210.0" text="Data Judul Karya ilmiah" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Pane layoutY="-5.0" prefHeight="151.0" prefWidth="1271.0" style="-fx-background-color: #064cdb;" />
+            <Label layoutX="244.0" layoutY="62.0" text="Repository Karya Ilmiah" textFill="WHITE">
+               <font>
+                  <Font name="Britannic Bold" size="36.0" />
+               </font>
+            </Label>
+            <Label layoutX="244.0" layoutY="102.0" text="Fakultas Teknologi Informasi " textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="120.0" fitWidth="139.0" layoutX="34.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@gambar/Logo-FTI-UNIBBA.png" />
+               </image>
+            </ImageView>
+            <VBox layoutX="11.0" layoutY="160.0" prefHeight="480.0" prefWidth="209.0" style="-fx-background-color: #dae7ff;">
+               <effect>
+                  <InnerShadow choke="0.17" color="#0ba88e" radius="9.2575" width="18.03" />
+               </effect>
+               <children>
+                  <JFXButton fx:id="id_pengdok" buttonType="RAISED" onAction="#btn_pengdok" prefHeight="42.0" prefWidth="212.0" style="-fx-background-color: #68a6f8;" text="Pengelolaan Dokumen" textFill="WHITE" />
+                  <JFXButton fx:id="id_lengdok" buttonType="RAISED" onAction="#btn_lengdok" prefHeight="42.0" prefWidth="212.0" style="-fx-background-color: #68a6f8;" text="Lengkapi Indeks Dokumen" textFill="WHITE" />
+                  <JFXButton fx:id="loggout" buttonType="RAISED" onAction="#btn_keluar" prefHeight="42.0" prefWidth="212.0" style="-fx-background-color: #68a6f8;" text="Keluar" textFill="WHITE" />
+               </children>
+            </VBox>
+            <Label layoutX="244.0" layoutY="196.0" text="Lengkapi Indeks Dokumen" textFill="#334cc6">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="27.0" fitWidth="27.0" layoutX="35.0" layoutY="259.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../reppository/src/image/Apps-session-logout-icon.png" />
+               </image>
+            </ImageView>
+            <ScrollPane layoutX="250.0" layoutY="240.0" prefHeight="379.0" prefWidth="433.0">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="690.0" prefWidth="200.0">
+                     <children>
+                        <Pane fx:id="pane_ft" layoutX="-86.0" layoutY="-1.0" prefHeight="702.0" prefWidth="522.0" style="-fx-background-color: #dae7ff;">
+                           <children>
+                              <JFXTextField fx:id="txt_Keywords" layoutX="233.0" layoutY="173.0" />
+                              <JFXTextField fx:id="txt_Title" layoutX="231.0" layoutY="145.0" />
+                              <JFXTextField fx:id="txt_Author" layoutX="231.0" layoutY="114.0" />
+                              <Label layoutX="117.0" layoutY="91.0" text="NPM" />
+                              <Label layoutX="116.0" layoutY="151.0" text="Judul Karya Ilmiah" />
+                              <Label layoutX="116.0" layoutY="182.0" text="Kata Kunci" />
+                              <Label layoutX="117.0" layoutY="121.0" text="Author" />
+                              <JFXTextField fx:id="txt_NPM" layoutX="232.0" layoutY="85.0" />
+                              <JFXButton fx:id="btncari122" buttonType="RAISED" layoutX="409.0" layoutY="14.0" onAction="#btn_cariid" prefHeight="25.0" prefWidth="74.0" style="-fx-background-color: #0c1045;" text="Cari" textFill="WHITE" />
+                              <TextField fx:id="tf_iddoc" layoutX="105.0" layoutY="14.0" prefHeight="25.0" prefWidth="302.0" promptText="Masukan ID Dokumen !" />
+                              <Label layoutX="115.0" layoutY="216.0" text="Tahun Terbit" />
+                              <JFXTextField fx:id="txt_Year" layoutX="232.0" layoutY="205.0" />
+                              <Label layoutX="115.0" layoutY="282.0" text="Status" />
+                              <JFXTextField fx:id="txt_Status" layoutX="230.0" layoutY="271.0" />
+                              <Label layoutX="115.0" layoutY="314.0" text="Tags" />
+                              <JFXTextField fx:id="txt_Tags" layoutX="230.0" layoutY="303.0" />
+                              <JFXButton fx:id="simpanindeks" buttonType="RAISED" disable="true" layoutX="417.0" layoutY="315.0" onAction="#btn_simpanindeks" prefHeight="25.0" prefWidth="74.0" style="-fx-background-color: #0c1045;" text="Simpan" textFill="WHITE" />
+                              <Label layoutX="118.0" layoutY="62.0" text="ID Dokumen" />
+                              <JFXTextField fx:id="txt_IDDoc" editable="false" layoutX="233.0" layoutY="56.0" />
+                              <Label layoutX="117.0" layoutY="247.0" text="Bulan" />
+                              <JFXTextField fx:id="txt_Month" layoutX="233.0" layoutY="237.0" />
+                              <Label layoutX="115.0" layoutY="341.0" text="Full Text" />
+                              <TextArea fx:id="FullText" layoutX="184.0" layoutY="350.0" prefHeight="54.0" prefWidth="200.0" />
+                              <JFXButton fx:id="Bersihkan" buttonType="RAISED" layoutX="417.0" layoutY="348.0" onAction="#btn_bersihkan" prefHeight="25.0" prefWidth="74.0" style="-fx-background-color: #0c1045;" text="Bersihkan" textFill="WHITE" />
+                           </children>
+                        </Pane>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </ScrollPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

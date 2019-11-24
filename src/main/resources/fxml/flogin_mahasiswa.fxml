@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="f_Logiin" prefHeight="702.0" prefWidth="1243.0" style="-fx-background-color: #99c5ff;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.storageing.FLoginController">
+   <children>
+      <ImageView fx:id="panetambah_akun" fitHeight="704.0" fitWidth="1247.0" opacity="0.88" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@gambar/IMG-20190712-WA0001.jpg" />
+         </image>
+      </ImageView>
+      <AnchorPane layoutX="759.0" layoutY="222.0" opacity="0.48" prefHeight="403.0" prefWidth="359.0" style="-fx-background-color: ffffff;" />
+      <Label layoutX="109.0" layoutY="440.0" text="Selamat Datang" textFill="#f8f8f8">
+         <font>
+            <Font size="37.0" />
+         </font>
+      </Label>
+      <Label layoutX="113.0" layoutY="483.0" text="Di Repository Fakultas Teknologi Informasi" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <JFXPasswordField fx:id="tfpassword" focusColor="#fefeff" layoutX="878.0" layoutY="425.0" promptText="Password" unFocusColor="WHITE" />
+      <JFXTextField fx:id="tfuser" focusColor="#f0f2f5" layoutX="880.0" layoutY="391.0" promptText="Username..." unFocusColor="#fcf5f5" />
+      <Label layoutX="905.0" layoutY="353.0" text="Log in" textFill="WHITE">
+         <font>
+            <Font name="Britannic Bold" size="24.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="buttonLogin" layoutX="850.0" layoutY="467.0" onAction="#btn_login" prefHeight="32.0" prefWidth="176.0" style="-fx-background-color: #1707f4;" text="Masuk" textFill="#fffdfd" />
+      <Pane opacity="0.88" prefHeight="145.0" prefWidth="1247.0" style="-fx-background-color: #064cdb;">
+         <effect>
+            <InnerShadow choke="0.23" height="34.345" radius="20.00875" width="47.69" />
+         </effect>
+      </Pane>
+      <Label layoutX="244.0" layoutY="61.0" text="Repository Karya Ilmiah" textFill="WHITE">
+         <font>
+            <Font name="Britannic Bold" size="36.0" />
+         </font>
+      </Label>
+      <Label layoutX="244.0" layoutY="101.0" text="Fakultas Teknologi Informasi " textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="120.0" fitWidth="139.0" layoutX="34.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@gambar/Logo-FTI-UNIBBA.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="120.0" fitWidth="84.0" layoutX="895.0" layoutY="267.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@gambar/user.png" />
+         </image>
+      </ImageView>
+      <Pane fx:id="pane_tambahakun" layoutX="656.0" layoutY="203.0" prefHeight="425.0" prefWidth="503.0" style="-fx-background-color: #f8f8f8;" visible="false">
+         <children>
+            <AnchorPane layoutX="-2.0" layoutY="-1.0" prefHeight="426.0" prefWidth="508.0" style="-fx-background-color: #ffffff;">
+               <effect>
+                  <InnerShadow height="41.754999999999995" radius="25.566249999999997" width="62.51" />
+               </effect>
+               <children>
+                  <AnchorPane fx:id="iddaftarakun" layoutX="-2.0" prefHeight="69.0" prefWidth="518.0" style="-fx-background-color: #064cdb;">
+                     <children>
+                        <Label layoutX="165.0" layoutY="26.0" text="Tambah Akun Baru" textFill="WHITE">
+                           <font>
+                              <Font name="Britannic Bold" size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <Label layoutX="46.0" layoutY="84.0" text="ID" visible="false">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <JFXTextField fx:id="tfid" layoutX="46.0" layoutY="98.0" prefHeight="25.0" prefWidth="182.0" promptText="*Masukan NPM" text="2" visible="false" />
+                  <Label fx:id="tdklngkap" layoutX="197.0" layoutY="84.0" text="Data Tidak Lengkap !" textFill="#e41f1f" visible="false">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="alret1" layoutX="189.0" layoutY="309.0" prefHeight="17.0" prefWidth="176.0" text="Username sudah terpakai !" textFill="#eb2020" visible="false">
+                     <font>
+                        <Font name="Britannic Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="batalakun" layoutX="169.0" layoutY="341.0" mnemonicParsing="false" onAction="#btn_batalakun" prefHeight="25.0" prefWidth="56.0" style="-fx-background-color: #f4354a;" text="Batal" textFill="WHITE">
+                     <effect>
+                        <InnerShadow />
+                     </effect>
+                  </Button>
+                  <Button fx:id="simpanakun" layoutX="302.0" layoutY="341.0" mnemonicParsing="false" onAction="#btn_simpanakun" prefHeight="25.0" prefWidth="70.0" style="-fx-background-color: #2727ee;" text="Simpan" textFill="WHITE">
+                     <effect>
+                        <InnerShadow />
+                     </effect>
+                  </Button>
+               </children>
+            </AnchorPane>
+            <Label layoutX="46.0" layoutY="99.0" text="NPM">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="283.0" layoutY="151.0" text="Password">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="46.0" layoutY="143.0" text="Nama">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="tfnpm" layoutX="46.0" layoutY="113.0" prefHeight="25.0" prefWidth="182.0" promptText="*Masukan NPM" />
+            <JFXTextField fx:id="tfnama" layoutX="45.0" layoutY="157.0" prefHeight="25.0" prefWidth="182.0" promptText="*Masukan Nama  Lengkap" />
+            <JFXTextField fx:id="tfpasss" focusColor="WHITE" layoutX="283.0" layoutY="164.0" prefHeight="25.0" prefWidth="182.0" promptText="*Minimal 8 Karakter" />
+            <Label layoutX="48.0" layoutY="189.0" text="Email">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="49.0" layoutY="240.0" text="Tlp">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="281.0" layoutY="99.0" text="Username">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="tfemail" layoutX="45.0" layoutY="210.0" prefHeight="25.0" prefWidth="182.0" promptText="*Masukan Email " />
+            <JFXTextField fx:id="tftlp" layoutX="46.0" layoutY="254.0" prefHeight="25.0" prefWidth="182.0" promptText="*Masukan No Telfon yang aktif" />
+            <JFXTextField fx:id="tfuser1" layoutX="283.0" layoutY="116.0" prefHeight="25.0" prefWidth="182.0" promptText="*Masukan username" />
+            <TextField fx:id="tfcat" layoutX="283.0" layoutY="201.0" prefHeight="69.0" prefWidth="182.0" promptText="Tambahkan Catatan" />
+         </children>
+      </Pane>
+   </children>
+   <effect>
+      <InnerShadow choke="0.05" height="75.86" radius="28.905" width="41.76" />
+   </effect>
+</AnchorPane>
